@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+  <MVCF.ModDef>
+    <defName>Cryptids</defName>
+    <label>cryptids</label>
+    <description>Adding ranged attacks for cryptids</description>
+    <ActivateFeatures>
+      <li>RangedAnimals</li>
+      <li>IntegratedToggle</li>
+    </ActivateFeatures>
+  </MVCF.ModDef>
+</Defs>

@@ -1,0 +1,6 @@
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Assemblies\Cryptids.dll
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Assemblies\Cryptids.pdb
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Cryptids\obj\Debug\Cryptids.csproj.AssemblyReference.cache
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Cryptids\obj\Debug\Cryptids.csproj.CoreCompileInputs.cache
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Cryptids\obj\Debug\Cryptids.dll
+D:\Steam\steamapps\common\RimWorld\Mods\Cryptids\Cryptids\obj\Debug\Cryptids.pdb

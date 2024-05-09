@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+  <incidentDef>
+    <defName>DeathwormPasses</defName>
+    <label>deathworms pass</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Cryptids.IncidentWorker_DeathwormPasses</workerClass>
+    <baseChance>2</baseChance>
+    <minRefireDays>6</minRefireDays>
+  </incidentDef>
+</Defs>

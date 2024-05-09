@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+  <ThinkTreeDef>
+    <defName>MongolianDeathWorm</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <!-- Do a queued job if possible -->
+            <li Class="ThinkNode_QueuedJob">
+              <inBedOnly>true</inBedOnly>
+            </li>
+
+            <!-- Keep lying down -->
+            <li Class="JobGiver_KeepLyingDown" />
+          </subNodes>
+        </li>
+
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        
+        <!-- Downed -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateCritical</treeDef>
+        </li>
+        
+        <!-- Lord directives -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+        
+        <!-- Insertion hook for modders -->
+        <li Class="ThinkNode_SubtreesByTag">
+          <insertTag>MongolianDeathWorm_PreMain</insertTag>
+        </li>
+
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>1.5~3.0</enemyDistToFleeRange>
+          <fleeDistRange>5~7.5</fleeDistRange>
+        </li>
+        
+        <!-- React to close melee threat -->
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>1.5</maxDistance>
+        </li>
+        
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>30</targetAcquireRadius>
+          <targetKeepRadius>40</targetKeepRadius>
+        </li>
+
+        <!-- Wild animals dig out if no path to map edge and starving -->
+        <li Class="ThinkNode_ConditionalHasFaction">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="ThinkNode_ConditionalStarving">
+              <subNodes>
+                <li Class="ThinkNode_ConditionalBodySize">
+                  <min>0.7</min>
+                  <subNodes>
+                    <li Class="ThinkNode_Subtree">
+                      <treeDef>DigOutIfCannotReachMapEdge</treeDef>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Leave if timed out -->
+        <li Class="ThinkNode_ConditionalExitTimedOut">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Misc</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_ExitMapRandom">
+                  <defaultLocomotion>Walk</defaultLocomotion>     
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Mental state non critical -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateNonCritical</treeDef>
+        </li>
+
+        <!-- Satisfy basic needs -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>SatisfyBasicNeeds</treeDef>
+        </li>
+
+        <!-- Insertion hook for modders -->
+        <li Class="ThinkNode_SubtreesByTag">
+          <insertTag>MongolianDeathWorm_PreWander</insertTag>
+        </li>
+        
+        <!-- Wander -->
+        <li Class="JobGiver_WanderHerd">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>MongolianDeathWormConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        
+        <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+          <subNodes>
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

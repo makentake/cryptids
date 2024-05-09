@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MoJWoAfpXs5EzsuuOdZlYuEFPdNWaHB8KInIAWKOexcM8cTMdnnK0ZyRuZSMAm2axDkhl7p4+fpshcg0pEDEXA==",
+  "success": true,
+  "projectFilePath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\Cryptids.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Elisha Fast\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4069\\krafs.rimworld.ref.1.5.4069.nupkg.sha512"
+  ],
+  "logs": []
+}

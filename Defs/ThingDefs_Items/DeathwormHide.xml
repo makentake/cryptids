@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <ThingDef ParentName="LeatherBase">
+        <defName>Leather_Deathworm</defName>
+        <label>mongolian death worm hide</label>
+        <description>The hide of a Mongolian death worm. It doesn't protect well from attacks, but it can insulate somewhat well.</description>
+        <statBases>
+          <MarketValue>1.5</MarketValue>
+          <StuffPower_Armor_Sharp>0.30</StuffPower_Armor_Sharp>
+          <StuffPower_Armor_Blunt>0.23</StuffPower_Armor_Blunt>
+          <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+          <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+        </statBases>
+        <graphicData>
+          <color>(200,116,28)</color>
+        </graphicData>
+        <stuffProps>
+          <color>(200,116,28)</color>
+          <commonality>0.025</commonality>
+          <statFactors>
+            <MaxHitPoints>0.7</MaxHitPoints>
+            <Beauty>0.5</Beauty>
+          </statFactors>
+        </stuffProps>
+    </ThingDef>
+</Defs>

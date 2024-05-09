@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>MongolianDeathWorm</defName>
+    <label>mongolian death worm</label>
+    <description>A two foot long mythical worm. It can spit a deadly poison in close combat which is rumored to instantly kill anyone it touches. Whether this is actually true has yet to be proven.</description>
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <MarketValue>1000</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <LeatherAmount>4</LeatherAmount>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+
+    <comps>
+      <li Class="AnimalBehaviours.CompProperties_Untameable">
+        <factionToReturnTo>Cryptids</factionToReturnTo>
+      </li>
+      <li Class="AnimalBehaviours.CompProperties_DoesntFlee"></li>
+    </comps>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.40</accuracyTouch>
+				<accuracyShort>0.25</accuracyShort>
+				<accuracyMedium>0.1</accuracyMedium>
+				<accuracyLong>0.05</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DeathwormSpit</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<range>5</range>
+				<label>mongolian death worm spit</label>
+      </li>
+    </verbs>
+
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Snake</body>
+      <thinkTreeMain>MongolianDeathWorm</thinkTreeMain>
+      <thinkTreeConstant>MongolianDeathWormConstant</thinkTreeConstant>
+      <predator>true</predator>
+      <baseBodySize>0.25</baseBodySize>
+      <baseHungerRate>0.07</baseHungerRate>
+      <baseHealthScale>0.5</baseHealthScale>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>Leather_Deathworm</leatherDef>
+      <meatLabel>mongolian death worm meat</meatLabel>
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Cobra_Wounded</soundWounded>
+          <soundDeath>Pawn_Cobra_Death</soundDeath>
+          <soundCall>Pawn_Cobra_Call</soundCall>
+          <soundAngry>Pawn_Cobra_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundEating>Reptile_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(-0.03, 0, 0.35)</li>
+        <li>(0.03, 0, 0.36)</li>
+        <li>(-0.05, 0, 0.28)</li>
+        <li>(-0.03, 0, 0.36)</li>
+      </headPosPerRotation>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MongolianDeathWorm</defName>
+    <label>mongolian death worm</label>
+    <race>MongolianDeathWorm</race>
+    <defaultFactionType>Cryptids</defaultFactionType>
+    <combatPower>250</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <ecoSystemWeight>1</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <!--<abilities>
+      <li>PoisonSpit</li>
+    </abilities>-->
+  </PawnKindDef>
+
+  <!--<ThingDef ParentName="AnimalThingBase">
+    <defName>MongolianDeathWorm</defName>
+    <label>mongolian death worm</label>
+    <description>A two foot long mythical worm. It can spit a deadly poison in close combat which is rumored to instantly kill anyone it touches. Whether this is actually true has yet to be proven.</description>
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <MarketValue>1000</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <LeatherAmount>4</LeatherAmount>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>DeathwormSpit</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Snake</body>
+      <predator>True</predator>
+      <baseBodySize>0.25</baseBodySize>
+      <baseHungerRate>0.07</baseHungerRate>
+      <baseHealthScale>0.5</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>Leather_Deathworm</leatherDef>
+      <meatLabel>mongolian death worm meat</meatLabel>
+      <wildness>0.99</wildness>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.75</manhunterOnDamageChance>
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Cobra_Wounded</soundWounded>
+          <soundDeath>Pawn_Cobra_Death</soundDeath>
+          <soundCall>Pawn_Cobra_Call</soundCall>
+          <soundAngry>Pawn_Cobra_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundEating>Reptile_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(-0.03, 0, 0.35)</li>
+        <li>(0.03, 0, 0.36)</li>
+        <li>(-0.05, 0, 0.28)</li>
+        <li>(-0.03, 0, 0.36)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MongolianDeathWorm</defName>
+    <label>mongolian death worm</label>
+    <race>MongolianDeathWorm</race>
+    <combatPower>250</combatPower>
+    <ecoSystemWeight>1</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/MongolianDeathWorm</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MongolianDeathWorm/Dessicated_MongolianDeathWorm</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>-->
+</Defs>

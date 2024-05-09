@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\Cryptids.csproj": {}
+  },
+  "projects": {
+    "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\Cryptids.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\Cryptids.csproj",
+        "projectName": "Cryptids",
+        "projectPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\Cryptids.csproj",
+        "packagesPath": "C:\\Users\\Elisha Fast\\.nuget\\packages\\",
+        "outputPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\Cryptids\\Cryptids\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Elisha Fast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Krafs.Rimworld.Ref": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[1.5.4069, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
