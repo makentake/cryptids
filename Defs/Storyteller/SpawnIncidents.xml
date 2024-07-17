@@ -12,4 +12,16 @@
     <baseChance>2</baseChance>
     <minRefireDays>6</minRefireDays>
   </incidentDef>
+
+  <incidentDef>
+    <defName>MothmanAttack</defName>
+    <label>mothman attack</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Cryptids.IncidentWorker_MothmanAttack</workerClass>
+    <baseChance>2</baseChance>
+    <minRefireDays>6</minRefireDays>
+  </incidentDef>
 </Defs>
