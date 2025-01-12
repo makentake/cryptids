@@ -40,7 +40,7 @@
         
         <!-- Insertion hook for modders -->
         <li Class="ThinkNode_SubtreesByTag">
-          <insertTag>MongolianDeathWorm_PreMain</insertTag>
+          <insertTag>Mothman_PreMain</insertTag>
         </li>
         
         <!-- React to close melee threat -->
@@ -63,20 +63,6 @@
                       <treeDef>DigOutIfCannotReachMapEdge</treeDef>
                     </li>
                   </subNodes>
-                </li>
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
-
-        <!-- Leave if timed out -->
-        <li Class="ThinkNode_ConditionalExitTimedOut">
-          <subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>Misc</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_ExitMapRandom">
-                  <defaultLocomotion>Walk</defaultLocomotion>     
                 </li>
               </subNodes>
             </li>
